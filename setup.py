@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "wine_quality_prediction"
+REPO_NAME = "cement_strength_Prediction"
 AUTHOR_USER_NAME = "nasir015"
 SRC_REPO = "mlProject"
 AUTHOR_EMAIL = "nasir1515@student.nstu.edu.bd"
@@ -17,7 +17,7 @@ setuptools.setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A small python package for ml app",
+    description="A small python package for cement strength prediction",
     long_description=long_description,
     long_description_content="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
