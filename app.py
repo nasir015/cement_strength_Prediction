@@ -8,8 +8,7 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.pipeline.logging import logger
-from src.pipeline.Exception import CustomException
+
 from src.utils.common import load_object
 
 
@@ -45,18 +44,17 @@ input_df = user_input_features()
 if st.button('Prediction'):
     def predict(feature):
             
-        try:
-            model_path = 'artifacts\\model.pkl'
-            preprocessor_path = 'artifacts\\preprocessor.pkl'
-            model = load_object(model_path)
-            preprocessor = load_object(preprocessor_path)
-            data_scaled = preprocessor.transform(feature)
-            prediction = model.predict(data_scaled)
+        
+        model_path = 'artifacts\\model.pkl'
+        preprocessor_path = 'artifacts\\preprocessor.pkl'
+        model = load_object(model_path)
+        preprocessor = load_object(preprocessor_path)
+        data_scaled = preprocessor.transform(feature)
+        prediction = model.predict(data_scaled)
+        
+        return prediction
             
-            return prediction
-            
-        except Exception as e:
-            raise CustomException(e,sys)
+        
         
     prediction = predict(input_df)
 
