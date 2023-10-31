@@ -6,8 +6,8 @@ from pipeline.Exception import CustomException
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
-#from src.components.data_transformation import DataTransformation,DataTransformationConfig
-#from model_training import ModelTrainer,ModelTrainerConfig
+from components.data_preprocessing import DataTransformation,DataTransformationConfig
+from components.model_training import ModelTrainer,ModelTrainerConfig
 
 
 path = open("E:\\Neoron\\Programming_Practice\\Machine_Learning_Project\\cement_strength_reg\\Log\\Data_ingestion.txt", "w")
@@ -61,13 +61,12 @@ class DataIngestion:
 if __name__ == "__main__":
     data_ingestion = DataIngestion()
     train_df, test_df = data_ingestion.initial_data_ingestion()
-'''    
+   
     data_transformation = DataTransformation()
     train_arr,test_arr,link = data_transformation.initiate_data_transformation(train_df,test_df)
     
      
     
-    
+  
     model_trainer = ModelTrainer()
-    model_trainer.initiate_model_trainer(train_arr,test_arr)'''
-    
+    model_trainer.initiate_model_trainer(train_arr,test_arr)

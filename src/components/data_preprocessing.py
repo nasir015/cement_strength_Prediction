@@ -9,7 +9,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from pipeline.logging import logger
 from pipeline.Exception import CustomException
-
+from utils.common import save_object
 
 
 path = open("E:\\Neoron\\Programming_Practice\\Machine_Learning_Project\\cement_strength_reg\\Log\\data_transformation.txt", "w")
@@ -30,9 +30,8 @@ class DataTransformation:
 
     def get_data_transformar_obj(self):
         try:
-            numerical_features = ['fixed_acidity', 'volatile_acidity', 'citric_acid', 'residual_sugar',
-       'chlorides', 'free_sulfur_dioxide', 'total_sulfur_dioxide', 'density',
-       'pH', 'sulphates', 'alcohol']
+            numerical_features = ['Cement', 'Blast_Furnace_Slag_', 'Fly_Ash', 'Water', 'Superplasticizer',
+       'Coarse_Aggregate', 'Fine_Aggregate', 'Age_day']
             
             logger(log_path, 'Numerical and categorical features are defined')
             
@@ -72,7 +71,7 @@ class DataTransformation:
             preprocessing_obj = self.get_data_transformar_obj()
             logger(log_path, 'preprocessing_obj is called')
             
-            target_column_name = "quality"
+            target_column_name = "Concrete_compressive_strength"
             logger(log_path, 'Target column is defined')
             
             input_feature_train = train_df.drop(target_column_name,axis=1)
