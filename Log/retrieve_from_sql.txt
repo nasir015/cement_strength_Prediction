@@ -1,0 +1,10 @@
+[2023-10-31 12:37:42,990] 37 Nasir - INFO - Connect to MySQL server
+[2023-10-31 12:37:43,035] 66 mysql.connector - INFO - package: mysql.connector.plugins
+[2023-10-31 12:37:43,037] 67 mysql.connector - INFO - plugin_name: mysql_native_password
+[2023-10-31 12:37:43,039] 71 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+[2023-10-31 12:37:43,040] 37 Nasir - INFO - Create cursor
+[2023-10-31 12:37:43,040] 37 Nasir - INFO - Execute SELECT query
+[2023-10-31 12:37:43,048] 37 Nasir - INFO - Fetch all rows
+[2023-10-31 12:37:43,068] 37 Nasir - INFO - Get column names
+[2023-10-31 12:37:43,071] 37 Nasir - INFO - create a dataframe with the column names as the header
+[2023-10-31 12:37:43,083] 37 Nasir - INFO - create an directory and then save the dataframe as a csv file
